@@ -1,0 +1,190 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+/* !=====container style=====> */
+.container {
+  width: 100%;
+  padding-inline: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container-fluid {
+  width: 95%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (max-width: 576px) {
+  .container-fluid {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1100px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+/* !=====custom bg=====> */
+.customer {
+  background-image: linear-gradient(to right, #fbb7e1ce, #fbb7e1ce),
+    url('/images/19ff1df94fe6268e0bd529beb9950b34.png');
+  background-size: cover;
+}
+.footer-background {
+  background-image: linear-gradient(#ffffffa6, #ffffffa6),
+    url('../../public/images/footer-background.png');
+  background-size: cover;
+}
+/* !=====swiper-pagination=====> */
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.home-swiper .swiper-pagination-bullet,
+.home-swiper .swiper-pagination-bullet-active {
+  background: #f82ba9 !important;
+}
+.custom-swiper .swiper-pagination-bullet,
+.home-swiper .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  background: white;
+  opacity: 1;
+  margin: 0 6px;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+}
+.custom-swiper .swiper-pagination-bullet-active,
+.home-swiper .swiper-pagination-bullet-active {
+  width: 16px;
+  height: 6px;
+  background: white;
+  border-radius: 9999px;
+}
+
+/* !=======loading style====|> */
+
+.loader {
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  text-indent: -9999em;
+  animation: mulShdSpin 1.3s infinite linear;
+  transform: translateZ(50);
+  margin: auto;
+}
+
+@keyframes mulShdSpin {
+  0%,
+  100% {
+    box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em,
+      0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+  }
+  12.5% {
+    box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em,
+      0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+  25% {
+    box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0,
+      0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+  }
+  37.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em,
+      0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  50% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em,
+      0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  62.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em,
+      0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+  }
+  75% {
+    box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em,
+      0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+  }
+  87.5% {
+    box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em,
+      0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+  }
+}
+
+.image-gallery-swipe {
+  border-radius: 15px !important;
+  overflow: hidden !important;
+  height: 450px;
+}
+.image-gallery-thumbnail {
+  border-radius: 15px !important;
+  overflow: hidden !important;
+  height: 100px;
+}
+.image-gallery-thumbnail:hover {
+  border-color: transparent !important;
+}
+.image-gallery-thumbnail.active,
+.image-gallery-thumbnail:focus {
+  border: 2px solid #f82ba9 !important;
+}
+
+/* ^ All Categories */
+.slider {
+  -webkit-appearance: none; /* تشيل الشكل الافتراضي للبراوزر */
+  width: 100%;
+  height: 8px;
+  background: #ccc; /* لون المسار */
+  border-radius: 5px;
+}
+
+/* شكل الدائرة اللي بتتحرك (لـ Chrome, Safari) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #007bff; /* لون الزرار */
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  margin-top: -6px; /* عشان يبقى في النص مظبوط */
+}
+
+.slider-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #007bff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-range::-moz-range-track {
+  background: #ccc;
+  height: 8px;
+  border-radius: 5px;
+}
