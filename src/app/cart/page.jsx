@@ -24,10 +24,6 @@ export default function Cart() {
   useEffect(() => {
     dispatch(fetchCartProducts());
   }, [dispatch, token]);
-  useEffect(() => {
-    console.log(token);
-  }, [token]);
-
   return (
     <>
       {data == "" || Quant === 0 ? (

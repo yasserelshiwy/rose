@@ -60,11 +60,10 @@ export default function page() {
                 </div>
               </div>
 
-
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                 {order.orderItems.map((product, index) => (
                   <OrderCards
-                    key={product.product.id}
+                    key={index}
                     id={product.product._id}
                     title={product.product.title}
                     rate={product.product.rateAvg}
@@ -74,7 +73,6 @@ export default function page() {
                   />
                 ))}
               </div>
-
 
               <div className="flex flex-col md:flex-row gap-4 md:justify-between items-center pr-4">
                 <p className="text-lg font-semibold text-gray-800">
@@ -96,7 +94,6 @@ export default function page() {
             </div>
           ))
         ) : (
-
           <section className="min-h-[55vh] py-15">
             <div className="container">
               <div className="w-full flex justify-center items-center">
