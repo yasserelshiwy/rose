@@ -181,6 +181,7 @@ export const cartSlice = createSlice({
       state.isLoading = false;
       state.data = action.payload.cart;
       state.Quant = action.payload.numOfCartItems;
+
     });
     builder.addCase(fetchCartProducts.rejected, (state, action) => {
       state.isLoading = false;

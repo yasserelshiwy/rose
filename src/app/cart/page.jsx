@@ -138,8 +138,8 @@ export default function Cart() {
                         Discount:
                       </h4>
                       <span className="text-[#757F95] ">
-                        <i className="fa-solid fa-dollar-sign"></i>{" "}
-                        {data ? data.discount : 0}
+                        
+                        40%
                       </span>
                     </div>
                     <div className="Shipping flex w-full justify-between items-center">
@@ -155,7 +155,7 @@ export default function Cart() {
                       <h4 className="text-[#160E4B] font-semibold">Total:</h4>
                       <span className="text-[#F82BA9] font-semibold">
                         <i className="fa-solid fa-dollar-sign"></i>{" "}
-                        {data ? data.totalPriceAfterDiscount : 0}
+                        {data ? data.totalPrice : 0}
                       </span>
                     </div>
                     <Link
